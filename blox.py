@@ -195,7 +195,7 @@ class Blox:
                 if self.board[j][i] is not None:
                     pyxel.blt(*p(x, y), 0, 16 + self.board[j][i] * CZ, 0, CZ, CZ)
                 else:
-                    pyxel.rectb(*p(x, y), *p(x + CZ - 1, y + CZ - 1), 1)
+                    pyxel.rectb(*p(x, y), *p(CZ, CZ), 1)
 
         for i, j in each_block(self.fx, self.fy, self.falling, self.fa):
             x, y = self.transform(i, j)
